@@ -1,5 +1,5 @@
 {
-  "$id": "https://abicab.nicogis.it/ABICAB/schema_abi_cab.json",
+  "$id": "https://abicab.nicogis.it/schema_abi_cab.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "Elenco banche abi e cab",
   "type": "object",
