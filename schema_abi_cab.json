@@ -1,0 +1,56 @@
+{
+  "$id": "https://github.nicogis.it/ABICAB/schema_abi_cab.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Elenco banche abi e cab",
+  "type": "object",
+  "properties": {
+    "abicab": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/abicab" }
+    }
+  },
+  "$defs": {
+    "abicab": {
+      "type": "object",
+      "required": [ "ABI", "CAB", "Istituto", "Sportello", "Indirizzo", "Citta", "CAP", "Provincia" ],
+      "properties": {
+        "ABI": {
+          "type": "string",
+          "description": "Associazione Bancaria Italiana",
+          "pattern": "^[0-9]{5}$"
+        },
+        "CAB": {
+          "type": "string",
+          "description": "Codice di Avviamento Bancario",
+          "pattern": "^[0-9]{5}$"
+        },
+        "Istituto": {
+          "type": "string",
+          "description": "Nome Istituto"
+        },
+        "Sportello": {
+          "type": "string",
+          "description": "Sportello"
+        },
+        "Indirizzo": {
+          "type": "string",
+          "description": "Indirizzo"
+        },
+        "Citta": {
+          "type": "string",
+          "description": "Città"
+        },
+        "CAP": {
+          "type": "string",
+          "description": "Codice di avviamento postale",
+          "pattern": "^[0-9]{5}$"
+        },
+        "Provincia": {
+          "type": "string",
+          "description": "Sigla provincia del comune",
+          "pattern": "^[A-Z]{2}$"
+        }
+      }
+    }
+  }
+}
